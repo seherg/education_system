@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('content_documents', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->foreignId('content_id')->constrained('contents')->onUpdate('cascade')->onDelete('cascade');
             $table->string('document');
             $table->timestamps();

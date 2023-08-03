@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class ContentText extends Model
 {
     use HasFactory;
+    protected $fillable=[
+        'id',
+        'content_id',
+        'text'
+    ];
 }

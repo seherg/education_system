@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('address');
-            $table->string('is_active');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

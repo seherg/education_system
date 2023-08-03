@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements('id')->from(404040)->unique();
-            $table->integer('student_no');
+            $table->string('identity_number');
             $table->string('name');
             $table->string('surname');
             $table->string('phone_number');
-            $table->string('email');
+            $table->string('email');  
             $table->string('password');
+            $table->enum('gender',['male','female']);
+            $table->date('birth_date');
             $table->string('address');
             $table->string('is_active');
             $table->timestamps();
